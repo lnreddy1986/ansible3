@@ -1,14 +1,14 @@
 ---
-- hosts: werbservers
+- hosts: webservers
   become: yes
-  vars:
-   myvar1: hayan
-   myvar2: samvi
+  vars: 
+    myvar1: ravi
+    myvar2: naresh
   tasks:
-  - name: display myvar1
+  - name:  display myvar1
     debug:
       msg: "{{myvar1}}"
 
   - name: display myvar2
     debug:
-      msg: "{{myvar2}}"   
+      msg: "{{myvar2}}"
