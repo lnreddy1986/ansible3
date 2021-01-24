@@ -1,0 +1,14 @@
+---
+- hosts: werbservers
+  become: yes
+  vars:
+   myvar1: hayan
+   myvar2: samvi
+  tasks:
+  - name: display myvar1
+    debug:
+      msg: "{{myvar1}}"
+
+  - name: display myvar2
+    debug:
+      msg: "{{myvar2}}"   
