@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: install jdk8 on ubuntu node
+    apt:
+     name: openjdk-8-ire
+     state: present
+    when: ansible_os_family == "Debian" 
+
+  - name: install jdk8 on amazon node
+    yum:
+     name: java-1.8.0-openjdk
+     state: present
+    when: ansible_os_family == "RedHat"  
